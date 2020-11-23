@@ -1,0 +1,164 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title></title>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/test.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		.xinxi{margin-left: 150px;}
+		#addres{width: 532px;}
+		.kaihu{margin-left: 160px;}
+		.hukou{margin-left: 50px;}
+		.mianmao{margin-left: 50px;}
+		.shenhe{margin-left: 280px;}
+		.btn-primary{margin-left: 20px;}
+	</style>
+</head>
+<body style="padding: 4px">
+<div class="notice_check" style="padding: 16px 15px 18px 15px">
+        <p>
+            <label class="">档案编码：</label>
+            <input type="text" class="find_input">
+			<label class="xinxi">变更类型：</label>
+			<select class="find_input"><option>全部</option><option>1</option></select>
+        </p>
+		<p>
+		    <label class="">所属部门：</label>
+		    <input type="text" class="find_input">
+			<label class="xinxi">档案状态：</label>
+			<select class="find_input"><option>全部</option><option>1</option></select>
+		</p>
+		<p>
+		    <label class="">职位名称：</label>
+		    <input type="text" class="find_input">
+			<label class="xinxi">职位编码：</label>
+			<select class="find_input"><option>全部</option><option>1</option></select>
+		</p>
+		<p>
+		    <label class="">姓名：</label>
+		    <input type="text" class="find_input">
+			<label class="xinxi">性别：</label>
+			<select class="find_input"><option>全部</option><option>1</option></select>
+		</p>
+		<p>
+		    <label class="">EMAIL：</label>
+		    <input type="text" class="find_input">
+			<label class="xinxi">联系电话：</label>
+		    <input type="text" class="find_input">
+		</p>
+		<p>
+		    <label class="">住址：</label>
+		    <input type="text" class="find_input" id="addres">
+		</p>
+		<p>
+		    <label class="">身份证号：</label>
+		    <input type="text" class="find_input">
+			<label class="hukou">户籍地：</label>
+			<input type="text" class="find_input">
+			<label class="mianmao">政治面貌：</label>
+			<input type="text" class="find_input">
+		</p>
+		<p>
+		    <label class="">毕业院校：</label>
+		    <input type="text" class="find_input">
+			<label class="hukou">专业：</label>
+			<input type="text" class="find_input">
+			<label class="mianmao">学历：</label>
+			<input type="text" class="find_input">
+		</p>
+		<p>
+		    <label class="">薪酬标准：</label>
+		    <select class="find_input"><option>全部</option><option>1</option></select>
+			<label class="kaihu">开户行：</label>
+			<input type="text" class="find_input">
+			<label class="mianmao">银行卡号：</label>
+			<input type="text" class="find_input">
+		</p>
+		<p>
+		    <label class="">社保卡号：</label>
+		    <input type="text" class="find_input">
+			<label class="hukou">登记人：</label>
+			<input type="text" class="find_input">
+			<label class="mianmao">建档时间：</label>
+			<input type="text" class="find_input">
+		</p>
+		<p>
+		    <label class="">个人履历：</label>
+		    <textarea  class="form-control" rows="2"></textarea>
+		</p>
+		<p>
+		    <label class="">家庭信息：</label>
+		    <textarea  class="form-control" rows="2"></textarea>
+		</p>
+		<p>
+		   <label class="">备注：</label>
+		   <textarea  class="form-control" rows="2"></textarea>
+		</p>
+		<p>
+		    <label class="">简历附件：</label>
+		    <input type="file" class="find_input">
+		</p>
+		<p class="shenhe">
+			<button class="btn btn-primary">审核通过</button>
+			<button class="btn btn-primary">驳回</button>
+			<button class="btn btn-primary">返回</button>
+		</p>
+    </div>
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            url: "json/carlist.json",
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded",
+            queryParams:null,
+            columns: [
+                {
+                    checkbox: "true",
+                    field: 'check',
+                    align: 'center',
+                    valign: 'middle'
+                }
+                ,
+                {
+                    title: "路口名称",
+                    field: 'tit',
+                    align: 'center',
+                    valign: 'middle'
+                },
+
+                {
+                    title: '方向',
+                    field: 'lation',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '过车时间',
+                    field: 'time',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '车速',
+                    field: 'sa',
+                    align: 'center'
+                }
+
+            ]
+        });
+        alert(parent.number02());
+    });
+</script>
+
+</body>
+</html>

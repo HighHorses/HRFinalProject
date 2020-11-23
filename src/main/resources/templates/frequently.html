@@ -14,43 +14,41 @@
 </head>
 <body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1150px;overflow: auto">
 <div class="notice_main">
-    <h6>布控申请</h6>
+    <h6>频繁过车信息查询</h6>
     <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
         <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
         <ul class="ts">
-            <li><span>*</span>该页面主要显示的是布控申请表格的类容。</li>
+            <li><span>*</span>该页面主要显示的是频繁过车信息查询表格的类容。</li>
         </ul>
-    </div>
-    <div class="notice_check">
-
-            <div class="notice_check" style="padding: 16px 15px 8px 15px">
-                <p>
-                    <label class="">车牌号码：</label>
-                    <input type="text" class="find_input" style="width: 198px">
-                    <label class="">开始时间：</label>
-                    <input type="text" class="find_input" style="width: 198px">
-                    <label class="">结束时间：</label>
-                    <input type="text" class="find_input" style="width: 198px">
-                </p>
-            </div>
-            <div class="notice_check  notice_check_last">
-                <p class="l_left">
-                    <label class="">审核状态：</label>
-                    <select class="find_input" style="width: 198px"><option>全部</option><option>1</option></select>
-                    <label class="">布控原因：</label>
-                    <input type="text" class="find_input" style="width: 198px">
-                    <label class="">优先级：</label>
-                    <select class="find_input last_input" style="width: 198px"><option>全部</option><option>1</option></select>
-                    <button class="check_btn">查询</button>
-                </p>
-                <div class="notice_nav r_right">
-                <a class="btn btn-default" onclick="addRole()"><span class="glyphicon glyphicon-plus"></span>申请</a>
-                <a class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>删除</a>
-                <a class="btn btn-default" onclick="addRole()"><span class="glyphicon glyphicon-pencil"></span>编辑</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-    </div>
+    </div><div class="notice_check">
+        <div class="notice_check" style="padding: 16px 15px 8px 15px">
+            <p>
+                <label class="">车牌号码：</label>
+                <input type="text" class="find_input">
+                <label class="">过车路口：</label>
+                <input type="text" class="find_input">
+                <label class="">过车次数：</label>
+                <input type="text" class="find_input">
+            </p>
+        </div>
+        <div class="notice_check  notice_check_last">
+            <p class="">
+                <label class="">车辆品牌：</label>
+                <select class="find_input"><option>全部</option><option>1</option></select>
+                <label class="">车辆类型：</label>
+                <select class="find_input"><option>全部</option><option>1</option></select>
+                <label class="">是否套牌：</label>
+                <select class="find_input last_input"><option>全部</option><option>是</option></select>
+                <button class="check_btn">查询</button>
+            </p>
+            <!--<div class="notice_nav r_right">-->
+            <!--<a class="btn btn-default" onclick="addRole()"><span class="glyphicon glyphicon-plus"></span>新增</a>-->
+            <!--<a class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>删除</a>-->
+            <!--<a class="btn btn-default" onclick="addRole()"><span class="glyphicon glyphicon-pencil"></span>编辑</a>-->
+            <!--</div>-->
+            <div class="clear"></div>
+        </div>
+</div>
     <table id="table" class="table_style" style="margin: 0 auto" > </table>
 </div>
     <script src="js/jquery/jQuery-2.2.0.min.js"></script>
@@ -64,7 +62,7 @@
                 method: "get",
                 striped: true,
                 singleSelect: false,
-                url: "json/check.json",
+                url: "json/carlog.json",
                 dataType: "json",
                 pagination: true, //分页
                 pageSize: 10,
@@ -87,56 +85,38 @@
                         valign: 'middle'
                     },
                     {
-                        title: '车辆品牌',
-                        field: 'logo',
-                        align: 'center',
-                        valign: 'middle'
-                    },
-                    {
                         title: '车辆类型',
                         field: 'type',
                         align: 'center',
                         valign: 'middle'
                     },
                     {
-                        title: '车辆颜色',
+                        title: '品牌',
                         field: 'color',
                         align: 'center',
                         valign: 'middle'
                     },
                     {
-                        title: '布控开始',
-                        field: 'time',
+                        title: '颜色',
+                        field: 'color01',
                         align: 'center',
                         valign: 'middle'
                     },
                     {
-                        title: '布控级别',
-                        field: 'calss',
+                        title: '是否套牌车',
+                        field: 'yes',
                         align: 'center',
                         valign: 'middle'
                     },
+
                     {
-                        title: '布控联系人',
-                        field: 'person',
-                        align: 'center',
-                        valign: 'middle'
+                        title: '过车路口',
+                        field: 'number',
+                        align: 'center'
                     },
                     {
-                        title: '布控单位',
-                        field: 'unit',
-                        align: 'center',
-                        valign: 'middle'
-                    },
-                    {
-                        title: '布控原因',
-                        field: 'surson',
-                        align: 'center',
-                        valign: 'middle'
-                    },
-                    {
-                        title: '审核状态',
-                        field: 'type01',
+                        title: '过车次数',
+                        field: 'no',
                         align: 'center'
                     },
                     {
@@ -144,8 +124,8 @@
                         field: 'opear',
                         align: 'center',
                         formatter: function (value, row) {
-                            var e = '<a  href="#" title="编辑" onclick="addRole(\'' + row.id + '\')">编辑</a> ';
-                            return e ;
+                            var d = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">过车记录</a> ';
+                            return d ;
                         }
                     }
                 ]
@@ -154,15 +134,16 @@
         function addRole(){
             layer.open({
                 type: 2,
-                title: '布控申请',
+                title: '过车记录',
                 shadeClose: true,
                 shade: 0.5,
                 skin: 'layui-layer-rim',
                 closeBtn:1,
-                area: ['700px', '420px'],
-                content: 'application_tail.html'
+                area: ['90%', '560px'],
+                content: 'passCar.html'
             });
         }
+
     </script>
 </body>
 </html>
