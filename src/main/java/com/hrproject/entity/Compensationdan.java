@@ -1,5 +1,7 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class Compensationdan {
 
   private long id;
@@ -8,7 +10,7 @@ public class Compensationdan {
   private long headcount;
   private double basic;
   private double practical;
-  private java.sql.Date grantTime;
+  private Date grantTime;
 
 
   public long getId() {
@@ -64,9 +66,12 @@ public class Compensationdan {
     this.practical = practical;
   }
 
-
-  public java.sql.Date getGrantTime() {
+  public Date getGrantTime() {
     return grantTime;
+  }
+
+  public void setGrantTime(Date grantTime) {
+    this.grantTime = grantTime;
   }
 
   public void setGrantTime(java.sql.Date grantTime) {

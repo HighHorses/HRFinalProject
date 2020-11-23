@@ -1,5 +1,7 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class TheQuestionBank {
 
   private long id;
@@ -9,7 +11,7 @@ public class TheQuestionBank {
   private String topicgrade;
   private String topicPeople;
   private String content;
-  private java.sql.Date creationTime;
+  private Date creationTime;
   private String topicFile;
   private String remark;
   private long startUsing;
@@ -77,9 +79,12 @@ public class TheQuestionBank {
     this.content = content;
   }
 
-
-  public java.sql.Date getCreationTime() {
+  public Date getCreationTime() {
     return creationTime;
+  }
+
+  public void setCreationTime(Date creationTime) {
+    this.creationTime = creationTime;
   }
 
   public void setCreationTime(java.sql.Date creationTime) {

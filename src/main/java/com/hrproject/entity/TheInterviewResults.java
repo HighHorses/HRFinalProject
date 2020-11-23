@@ -1,17 +1,19 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class TheInterviewResults {
 
   private long id;
   private long reStatus;
   private String oneInterviewer;
-  private java.sql.Date oneTime;
+  private Date oneTime;
   private String oneEvaluate;
   private String twoInterviewer;
-  private java.sql.Date twoTime;
+  private Date twoTime;
   private String twoEvaluate;
   private String threeInterviewer;
-  private java.sql.Date threeTime;
+  private Date threeTime;
   private String threeEvaluate;
 
 
@@ -41,11 +43,6 @@ public class TheInterviewResults {
     this.oneInterviewer = oneInterviewer;
   }
 
-
-  public java.sql.Date getOneTime() {
-    return oneTime;
-  }
-
   public void setOneTime(java.sql.Date oneTime) {
     this.oneTime = oneTime;
   }
@@ -68,15 +65,9 @@ public class TheInterviewResults {
     this.twoInterviewer = twoInterviewer;
   }
 
-
-  public java.sql.Date getTwoTime() {
-    return twoTime;
-  }
-
   public void setTwoTime(java.sql.Date twoTime) {
     this.twoTime = twoTime;
   }
-
 
   public String getTwoEvaluate() {
     return twoEvaluate;
@@ -95,9 +86,28 @@ public class TheInterviewResults {
     this.threeInterviewer = threeInterviewer;
   }
 
+  public Date getOneTime() {
+    return oneTime;
+  }
 
-  public java.sql.Date getThreeTime() {
+  public void setOneTime(Date oneTime) {
+    this.oneTime = oneTime;
+  }
+
+  public Date getTwoTime() {
+    return twoTime;
+  }
+
+  public void setTwoTime(Date twoTime) {
+    this.twoTime = twoTime;
+  }
+
+  public Date getThreeTime() {
     return threeTime;
+  }
+
+  public void setThreeTime(Date threeTime) {
+    this.threeTime = threeTime;
   }
 
   public void setThreeTime(java.sql.Date threeTime) {

@@ -1,5 +1,7 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class PersonnelArchive {
 
   private long id;
@@ -28,7 +30,7 @@ public class PersonnelArchive {
   private String bankNo;
   private String sbNo;
   private String registrant;
-  private java.sql.Date creationTime;
+  private Date creationTime;
   private String grlv;
   private String family;
   private String remark;
@@ -267,9 +269,20 @@ public class PersonnelArchive {
     this.registrant = registrant;
   }
 
+  public String geteMail() {
+    return eMail;
+  }
 
-  public java.sql.Date getCreationTime() {
+  public void seteMail(String eMail) {
+    this.eMail = eMail;
+  }
+
+  public Date getCreationTime() {
     return creationTime;
+  }
+
+  public void setCreationTime(Date creationTime) {
+    this.creationTime = creationTime;
   }
 
   public void setCreationTime(java.sql.Date creationTime) {

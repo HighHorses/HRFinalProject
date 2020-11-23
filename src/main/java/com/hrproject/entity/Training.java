@@ -1,12 +1,14 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class Training {
 
   private long id;
   private String trainName;
   private String trainer;
-  private java.sql.Date trainTimeStart;
-  private java.sql.Date trainTimeOver;
+  private Date trainTimeStart;
+  private Date trainTimeOver;
   private String goal;
   private long archiveId;
   private String participant;
@@ -46,18 +48,24 @@ public class Training {
     this.trainer = trainer;
   }
 
-
-  public java.sql.Date getTrainTimeStart() {
+  public Date getTrainTimeStart() {
     return trainTimeStart;
+  }
+
+  public void setTrainTimeStart(Date trainTimeStart) {
+    this.trainTimeStart = trainTimeStart;
+  }
+
+  public Date getTrainTimeOver() {
+    return trainTimeOver;
+  }
+
+  public void setTrainTimeOver(Date trainTimeOver) {
+    this.trainTimeOver = trainTimeOver;
   }
 
   public void setTrainTimeStart(java.sql.Date trainTimeStart) {
     this.trainTimeStart = trainTimeStart;
-  }
-
-
-  public java.sql.Date getTrainTimeOver() {
-    return trainTimeOver;
   }
 
   public void setTrainTimeOver(java.sql.Date trainTimeOver) {

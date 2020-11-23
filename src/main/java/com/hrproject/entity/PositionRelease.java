@@ -1,5 +1,7 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class PositionRelease {
 
   private long id;
@@ -8,8 +10,8 @@ public class PositionRelease {
   private long zptype;
   private long zpCount;
   private String creator;
-  private java.sql.Date creationTimeStart;
-  private java.sql.Date creationTimeOver;
+  private Date creationTimeStart;
+  private Date creationTimeOver;
   private String describEs;
   private String conditioNs;
 
@@ -67,18 +69,24 @@ public class PositionRelease {
     this.creator = creator;
   }
 
-
-  public java.sql.Date getCreationTimeStart() {
+  public Date getCreationTimeStart() {
     return creationTimeStart;
+  }
+
+  public void setCreationTimeStart(Date creationTimeStart) {
+    this.creationTimeStart = creationTimeStart;
+  }
+
+  public Date getCreationTimeOver() {
+    return creationTimeOver;
+  }
+
+  public void setCreationTimeOver(Date creationTimeOver) {
+    this.creationTimeOver = creationTimeOver;
   }
 
   public void setCreationTimeStart(java.sql.Date creationTimeStart) {
     this.creationTimeStart = creationTimeStart;
-  }
-
-
-  public java.sql.Date getCreationTimeOver() {
-    return creationTimeOver;
   }
 
   public void setCreationTimeOver(java.sql.Date creationTimeOver) {

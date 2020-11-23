@@ -1,5 +1,7 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class Compensationbiaozhun {
 
   private long id;
@@ -8,7 +10,7 @@ public class Compensationbiaozhun {
   private long rewardId;
   private String designer;
   private String registrant;
-  private java.sql.Date creationTime;
+  private Date creationTime;
   private double esum;
   private long backlogTypeId;
   private long auditStatus;
@@ -67,9 +69,12 @@ public class Compensationbiaozhun {
     this.registrant = registrant;
   }
 
-
-  public java.sql.Date getCreationTime() {
+  public Date getCreationTime() {
     return creationTime;
+  }
+
+  public void setCreationTime(Date creationTime) {
+    this.creationTime = creationTime;
   }
 
   public void setCreationTime(java.sql.Date creationTime) {

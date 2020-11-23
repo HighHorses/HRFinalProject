@@ -1,5 +1,7 @@
 package com.hrproject.entity;
 
+import java.util.Date;
+
 public class Resumes {
 
   private long id;
@@ -18,11 +20,11 @@ public class Resumes {
   private long pay;
   private long onJob;
   private long freshGraduate;
-  private java.sql.Date checkTime;
+  private Date checkTime;
   private String grlv;
   private String jlFile;
   private String referrer;
-  private java.sql.Date reTime;
+  private Date reTime;
   private String reIdea;
   private long reStatus;
 
@@ -171,10 +173,6 @@ public class Resumes {
   }
 
 
-  public java.sql.Date getCheckTime() {
-    return checkTime;
-  }
-
   public void setCheckTime(java.sql.Date checkTime) {
     this.checkTime = checkTime;
   }
@@ -206,9 +204,28 @@ public class Resumes {
     this.referrer = referrer;
   }
 
+  public String geteMail() {
+    return eMail;
+  }
 
-  public java.sql.Date getReTime() {
+  public void seteMail(String eMail) {
+    this.eMail = eMail;
+  }
+
+  public Date getCheckTime() {
+    return checkTime;
+  }
+
+  public void setCheckTime(Date checkTime) {
+    this.checkTime = checkTime;
+  }
+
+  public Date getReTime() {
     return reTime;
+  }
+
+  public void setReTime(Date reTime) {
+    this.reTime = reTime;
   }
 
   public void setReTime(java.sql.Date reTime) {
