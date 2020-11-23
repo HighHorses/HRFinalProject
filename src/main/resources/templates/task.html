@@ -42,7 +42,7 @@
             <div class="clear"></div>
         </div>
 		<div class="notice_check  notice_check_last">
-		   <button class="btn btn-primary">档案登记</button>
+		   <button class="btn btn-primary" id="dengji">档案登记</button>
 		</div>
 </div>
     <table id="table" class="table_style" style="margin: 0 auto" > </table>
@@ -148,7 +148,9 @@
                 content: 'passCar.html'
             });
         }
-
+        $("#dengji").click(function(){
+            window.location.href="dengji.html";
+        })
     </script>
 </body>
 </html>
