@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hrproject.dao.PersonnelArchiveDao">
+
+    <!--动态查询及分页-->
+    <select id="findPersonnelArchive" resultType="PersonnelArchive" parameterType="PersonnelArchive">
+        select recordNo,customerName,sex,
+        (select bmName from department d where d.id = f.bmId) bmName,
+        (select zwName from `zhiwei` z where z.id = f.zwId ) zwName,
+        (select zcName from The_title t where t.id = f.zcId) zcName,
+        creationTime,shStatus,recordStatus from Personnel_archive f
+    </select>
+</mapper>

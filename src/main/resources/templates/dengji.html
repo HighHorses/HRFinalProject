@@ -14,36 +14,16 @@
 </head>
 <body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1150px;overflow: auto">
 <div class="notice_main">
-    <h6>人事档案管理</h6>
+    <h6>人事档案登记</h6>
     <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
         <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
         <ul class="ts">
-            <li><span>*</span>该页面主要显示的是人事档案管理的类容。</li>
+            <li><span>*</span>该页面主要显示的是人事档案登记的内容。</li>
         </ul>
     </div><div class="notice_check">
-        <div class="notice_check" style="padding: 16px 15px 8px 15px">
-            <p>
-                <label class="">档案编号：</label>
-                <input type="text" class="find_input">
-				<label class="">审核状态：</label>
-				<select class="find_input"><option>全部</option><option>1</option></select>
-                <label class="">档案状态：</label>
-                <select class="find_input"><option>全部</option><option>1</option></select>
-            </p>
-        </div>
-        <div class="notice_check  notice_check_last">
-            <p class="">
-                <label class="">建档时间：</label>
-                <input type="date" class="find_input">
-                至
-                <input type="date" class="find_input">
-                <button class="check_btn">查询</button>
-            </p>
-            <div class="clear"></div>
-        </div>
-		<div class="notice_check  notice_check_last">
-		   <button class="btn btn-primary" id="dengji">档案登记</button>
-		</div>
+	<div class="notice_check  notice_check_last">
+	   <button class="btn btn-primary" id="dengji">返回</button>
+	</div>
 </div>
     <table id="table" class="table_style" style="margin: 0 auto" > </table>
 </div>
@@ -68,12 +48,6 @@
                 queryParams: null,
                 columns: [
                     {
-                        title: "档案编码",
-                        field: 'id',
-                        align: 'center',
-                        valign: 'middle'
-                    },
-                    {
                         title: '姓名',
                         field: 'type',
                         align: 'center',
@@ -86,35 +60,35 @@
                         valign: 'middle'
                     },
                     {
-                        title: '所属部门',
+                        title: '电话',
                         field: 'color01',
                         align: 'center',
                         valign: 'middle'
                     },
                     {
-                        title: '职位',
+                        title: '地址',
                         field: 'yes',
                         align: 'center',
                         valign: 'middle'
                     },
 
                     {
-                        title: '职称',
+                        title: '邮箱',
                         field: 'number',
                         align: 'center'
                     },
                     {
-                        title: '建档日期',
+                        title: '推荐人',
                         field: 'no',
                         align: 'center'
                     },
 					{
-					    title: '审核状态',
+					    title: '推荐时间',
 					    field: 'no',
 					    align: 'center'
 					},
 					{
-					    title: '档案状态',
+					    title: '简历状态',
 					    field: 'no',
 					    align: 'center'
 					},
@@ -123,14 +97,8 @@
                         field: 'opear',
                         align: 'center',
                         formatter: function (value, row) {
-                            var d = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">修改</a> ';
-							var e = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">变更</a> ';
-							var f = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">复核</a> ';
-							var g = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">明细</a> ';
-							var h = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">删除</a> ';
-							var i = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">永久删除</a> ';
-							var j = '<a  href="Javascript:void(0)" title="查看详情" onclick="addRole(\'' + row.id + '\')">回复</a> ';
-                            return d+e+f+g+h+i+j;
+                            var d = '<a  href="Javascript:void(0)" title="登记" onclick="addRole(\'' + row.id + '\')">登记</a> ';
+                            return d;
                         }
                     }
                 ]
@@ -139,7 +107,7 @@
         function addRole(){
             layer.open({
                 type: 2,
-                title: '人事档案管理',
+                title: '人事档案登记',
                 shadeClose: true,
                 shade: 0.5,
                 skin: 'layui-layer-rim',
@@ -148,9 +116,7 @@
                 content: 'passCar.html'
             });
         }
-        $("#dengji").click(function(){
-            window.location.href="dengji.html";
-        })
+
     </script>
 </body>
 </html>
