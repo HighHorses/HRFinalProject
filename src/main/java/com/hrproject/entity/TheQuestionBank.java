@@ -6,8 +6,6 @@ public class TheQuestionBank {
 
   private long id;
   private String topicName;
-  private long topicId;
-  private long bmId;
   private String topicgrade;
   private String topicPeople;
   private String content;
@@ -16,6 +14,8 @@ public class TheQuestionBank {
   private String remark;
   private long startUsing;
 
+  private TestingTypes testingTypes;
+  private Department department;
 
   public long getId() {
     return id;
@@ -35,23 +35,21 @@ public class TheQuestionBank {
   }
 
 
-  public long getTopicId() {
-    return topicId;
+  public Department getDepartment() {
+    return department;
   }
 
-  public void setTopicId(long topicId) {
-    this.topicId = topicId;
+  public void setDepartment(Department department) {
+    this.department = department;
   }
 
-
-  public long getBmId() {
-    return bmId;
+  public TestingTypes getTestingTypes() {
+    return testingTypes;
   }
 
-  public void setBmId(long bmId) {
-    this.bmId = bmId;
+  public void setTestingTypes(TestingTypes testingTypes) {
+    this.testingTypes = testingTypes;
   }
-
 
   public String getTopicgrade() {
     return topicgrade;

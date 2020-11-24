@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namneSapce必须唯一，因其用来区分map文件,dao接口全名称-->
+<mapper namespace="com.hrproject.dao.PositionReleaseDao">
+    <insert id="insertPositionRelease" parameterType="PositionRelease">
+        insert into position_release (bmId,zwId,zptype,zpCount,creator,creationTimeStart,
+        creationTimeOver,DESCRIBEs,CONDITIONs) values (#{bmid},#{zwId},#{zptype},#{zpCount},#{creator},#{creationTimeStart},
+        #{creationTimeOver},#{describEs},#{conditioNs})
+    </insert>
+    <delete id="delPositionRelease" parameterType="int">
+        delete from position_release where id=#{id}
+    </delete>
+    <select id="selectPositionRelease" parameterType="PositionRelease">
+        select z.zwNo,z.zwName,zwtype,
+    </select>
+</mapper>

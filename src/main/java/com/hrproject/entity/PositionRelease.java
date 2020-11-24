@@ -5,8 +5,6 @@ import java.util.Date;
 public class PositionRelease {
 
   private long id;
-  private long bmId;
-  private long zwId;
   private long zptype;
   private long zpCount;
   private String creator;
@@ -15,6 +13,10 @@ public class PositionRelease {
   private String describEs;
   private String conditioNs;
 
+  //职位
+  private Zhiwei zhiwei;
+  //部门
+  private Department department;
 
   public long getId() {
     return id;
@@ -25,23 +27,21 @@ public class PositionRelease {
   }
 
 
-  public long getBmId() {
-    return bmId;
+  public Zhiwei getZhiwei() {
+    return zhiwei;
   }
 
-  public void setBmId(long bmId) {
-    this.bmId = bmId;
+  public void setZhiwei(Zhiwei zhiwei) {
+    this.zhiwei = zhiwei;
   }
 
-
-  public long getZwId() {
-    return zwId;
+  public Department getDepartment() {
+    return department;
   }
 
-  public void setZwId(long zwId) {
-    this.zwId = zwId;
+  public void setDepartment(Department department) {
+    this.department = department;
   }
-
 
   public long getZptype() {
     return zptype;

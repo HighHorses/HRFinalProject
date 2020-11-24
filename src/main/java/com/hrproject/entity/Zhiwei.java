@@ -5,12 +5,12 @@ public class Zhiwei {
   private long id;
   private String zwNo;
   private String zwName;
-  private long zwbm;
-  private long zwtype;
   private String describEs;
   private String remark;
   private long startUsing;
 
+  private Department department;
+  private JobCategory jobCategory;
 
   public long getId() {
     return id;
@@ -39,23 +39,21 @@ public class Zhiwei {
   }
 
 
-  public long getZwbm() {
-    return zwbm;
+  public Department getDepartment() {
+    return department;
   }
 
-  public void setZwbm(long zwbm) {
-    this.zwbm = zwbm;
+  public void setDepartment(Department department) {
+    this.department = department;
   }
 
-
-  public long getZwtype() {
-    return zwtype;
+  public JobCategory getJobCategory() {
+    return jobCategory;
   }
 
-  public void setZwtype(long zwtype) {
-    this.zwtype = zwtype;
+  public void setJobCategory(JobCategory jobCategory) {
+    this.jobCategory = jobCategory;
   }
-
 
   public String getDescribEs() {
     return describEs;
