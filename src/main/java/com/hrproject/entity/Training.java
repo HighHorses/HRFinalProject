@@ -10,17 +10,17 @@ public class Training {
   private Date trainTimeStart;
   private Date trainTimeOver;
   private String goal;
-  private long archiveId;
   private String participant;
   private String synopsis;
   private String trainFile;
   private long trainStatus;
-  private long backlogTypeId;
   private String opinion;
   private long feedback;
   private String summarize;
   private String result;
 
+  private ToDo toDo;
+  private PersonnelArchive personnelArchive;
 
   public long getId() {
     return id;
@@ -82,14 +82,13 @@ public class Training {
   }
 
 
-  public long getArchiveId() {
-    return archiveId;
+  public ToDo getToDo() {
+    return toDo;
   }
 
-  public void setArchiveId(long archiveId) {
-    this.archiveId = archiveId;
+  public void setToDo(ToDo toDo) {
+    this.toDo = toDo;
   }
-
 
   public String getParticipant() {
     return participant;
@@ -127,14 +126,13 @@ public class Training {
   }
 
 
-  public long getBacklogTypeId() {
-    return backlogTypeId;
+  public PersonnelArchive getPersonnelArchive() {
+    return personnelArchive;
   }
 
-  public void setBacklogTypeId(long backlogTypeId) {
-    this.backlogTypeId = backlogTypeId;
+  public void setPersonnelArchive(PersonnelArchive personnelArchive) {
+    this.personnelArchive = personnelArchive;
   }
-
 
   public String getOpinion() {
     return opinion;

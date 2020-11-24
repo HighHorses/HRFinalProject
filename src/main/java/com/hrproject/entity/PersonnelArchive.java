@@ -12,9 +12,6 @@ public class PersonnelArchive {
   private long age;
   private String sex;
   private String idNo;
-  private long bmId;
-  private long zwId;
-  private long zcId;
   private String xueli;
   private String zhuanye;
   private String phone;
@@ -23,9 +20,7 @@ public class PersonnelArchive {
   private String politicsStatus;
   private long usertype;
   private long shStatus;
-  private long backlogTypeId;
   private long recordStatus;
-  private long remStandard;
   private String khBank;
   private String bankNo;
   private String sbNo;
@@ -35,6 +30,51 @@ public class PersonnelArchive {
   private String family;
   private String remark;
 
+  private ToDo toDo;
+  private Compensationbiaozhun compensationbiaozhun;
+  private Department department;
+  private Zhiwei zhiwei;
+  private TheTitle theTitle;
+
+  public ToDo getToDo() {
+    return toDo;
+  }
+
+  public void setToDo(ToDo toDo) {
+    this.toDo = toDo;
+  }
+
+  public Compensationbiaozhun getCompensationbiaozhun() {
+    return compensationbiaozhun;
+  }
+
+  public void setCompensationbiaozhun(Compensationbiaozhun compensationbiaozhun) {
+    this.compensationbiaozhun = compensationbiaozhun;
+  }
+
+  public Department getDepartment() {
+    return department;
+  }
+
+  public void setDepartment(Department department) {
+    this.department = department;
+  }
+
+  public Zhiwei getZhiwei() {
+    return zhiwei;
+  }
+
+  public void setZhiwei(Zhiwei zhiwei) {
+    this.zhiwei = zhiwei;
+  }
+
+  public TheTitle getTheTitle() {
+    return theTitle;
+  }
+
+  public void setTheTitle(TheTitle theTitle) {
+    this.theTitle = theTitle;
+  }
 
   public long getId() {
     return id;
@@ -105,33 +145,6 @@ public class PersonnelArchive {
 
   public void setIdNo(String idNo) {
     this.idNo = idNo;
-  }
-
-
-  public long getBmId() {
-    return bmId;
-  }
-
-  public void setBmId(long bmId) {
-    this.bmId = bmId;
-  }
-
-
-  public long getZwId() {
-    return zwId;
-  }
-
-  public void setZwId(long zwId) {
-    this.zwId = zwId;
-  }
-
-
-  public long getZcId() {
-    return zcId;
-  }
-
-  public void setZcId(long zcId) {
-    this.zcId = zcId;
   }
 
 
@@ -207,30 +220,12 @@ public class PersonnelArchive {
   }
 
 
-  public long getBacklogTypeId() {
-    return backlogTypeId;
-  }
-
-  public void setBacklogTypeId(long backlogTypeId) {
-    this.backlogTypeId = backlogTypeId;
-  }
-
-
   public long getRecordStatus() {
     return recordStatus;
   }
 
   public void setRecordStatus(long recordStatus) {
     this.recordStatus = recordStatus;
-  }
-
-
-  public long getRemStandard() {
-    return remStandard;
-  }
-
-  public void setRemStandard(long remStandard) {
-    this.remStandard = remStandard;
   }
 
 

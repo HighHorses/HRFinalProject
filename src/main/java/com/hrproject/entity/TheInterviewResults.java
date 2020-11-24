@@ -5,7 +5,6 @@ import java.util.Date;
 public class TheInterviewResults {
 
   private long id;
-  private long reStatus;
   private String oneInterviewer;
   private Date oneTime;
   private String oneEvaluate;
@@ -16,6 +15,8 @@ public class TheInterviewResults {
   private Date threeTime;
   private String threeEvaluate;
 
+  //
+  private Resumes resumes;
 
   public long getId() {
     return id;
@@ -26,14 +27,13 @@ public class TheInterviewResults {
   }
 
 
-  public long getReStatus() {
-    return reStatus;
+  public Resumes getResumes() {
+    return resumes;
   }
 
-  public void setReStatus(long reStatus) {
-    this.reStatus = reStatus;
+  public void setResumes(Resumes resumes) {
+    this.resumes = resumes;
   }
-
 
   public String getOneInterviewer() {
     return oneInterviewer;

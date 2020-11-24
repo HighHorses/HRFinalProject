@@ -3,9 +3,10 @@ package com.hrproject.entity;
 public class Daibanliebiao {
 
   private long id;
-  private long backlogTypeId;
   private String backlogName;
 
+  //待办实体
+  private ToDo toDo;
 
   public long getId() {
     return id;
@@ -16,14 +17,13 @@ public class Daibanliebiao {
   }
 
 
-  public long getBacklogTypeId() {
-    return backlogTypeId;
+  public ToDo getToDo() {
+    return toDo;
   }
 
-  public void setBacklogTypeId(long backlogTypeId) {
-    this.backlogTypeId = backlogTypeId;
+  public void setToDo(ToDo toDo) {
+    this.toDo = toDo;
   }
-
 
   public String getBacklogName() {
     return backlogName;

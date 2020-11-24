@@ -5,7 +5,6 @@ import java.util.Date;
 public class Resumes {
 
   private long id;
-  private long zpId;
   private String acceptName;
   private long sex;
   private String xueli;
@@ -28,6 +27,9 @@ public class Resumes {
   private String reIdea;
   private long reStatus;
 
+  //职位发布
+  private PositionRelease positionRelease;
+
 
   public long getId() {
     return id;
@@ -37,15 +39,12 @@ public class Resumes {
     this.id = id;
   }
 
+  public PositionRelease getPositionRelease() {
+    return positionRelease;  }
 
-  public long getZpId() {
-    return zpId;
+  public void setPositionRelease(PositionRelease positionRelease) {
+    this.positionRelease = positionRelease;
   }
-
-  public void setZpId(long zpId) {
-    this.zpId = zpId;
-  }
-
 
   public String getAcceptName() {
     return acceptName;

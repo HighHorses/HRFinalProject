@@ -5,11 +5,11 @@ public class TheTitle {
   private long id;
   private String zcNo;
   private String zcName;
-  private long zcbm;
   private String describEs;
   private String remark;
   private long startUsing;
 
+  private Department department;
 
   public long getId() {
     return id;
@@ -38,14 +38,13 @@ public class TheTitle {
   }
 
 
-  public long getZcbm() {
-    return zcbm;
+  public Department getDepartment() {
+    return department;
   }
 
-  public void setZcbm(long zcbm) {
-    this.zcbm = zcbm;
+  public void setDepartment(Department department) {
+    this.department = department;
   }
-
 
   public String getDescribEs() {
     return describEs;
